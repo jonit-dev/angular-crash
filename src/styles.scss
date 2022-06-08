@@ -64,13 +64,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
 
-.form-control-check label {
-  flex: 1;
-}
+  label {
+    flex: 90%;
+  }
 
-.form-control-check input {
-  flex: 2;
-  height: 20px;
+  input {
+    flex: 10%;
+    height: 20px;
+    position: relative;
+    left: 1.25rem;
+  }
 }
