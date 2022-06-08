@@ -1,4 +1,14 @@
-<div class="task">
-  <h3>{{ task.text }} <fa-icon class="close" [icon]="faTimes"></fa-icon></h3>
+<div
+  class="task {{ task.reminder === true && 'reminder' }}"
+  (dblclick)="onToggleReminder(task)"
+>
+  <h3>
+    {{ task.text }}
+    <fa-icon
+      (click)="onDeleteItem(task)"
+      class="close"
+      [icon]="faTimes"
+    ></fa-icon>
+  </h3>
   <p>{{ task.day }}</p>
 </div>
