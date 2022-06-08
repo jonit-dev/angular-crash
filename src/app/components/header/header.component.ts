@@ -10,7 +10,7 @@ import { UiService } from 'src/app/services/ui.service';
 export class HeaderComponent implements OnInit {
   title: string = 'Task Tracker';
 
-  showAddTask: boolean = false;
+  showAddTask: boolean;
   subscription: Subscription;
 
   constructor(private uiService: UiService) {

@@ -21,7 +21,7 @@ export class AddTaskComponent implements OnInit {
   reminder: boolean = false;
 
   subscription: Subscription;
-  showAddTask: boolean = false;
+  showAddTask: boolean;
 
   constructor(private uiService: UiService) {
     this.subscription = this.uiService.onToggle().subscribe((showAddTask) => {
