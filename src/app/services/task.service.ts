@@ -12,6 +12,10 @@ export class TaskService {
 
   constructor(private httpClient: HttpClient) {}
 
+  addTask(task: ITask): Observable<ITask> {
+    return this.httpClient.post<ITask>(this.apiUrl, task);
+  }
+
   // how to handle async calls with observables...
   getTasks(): Observable<ITask[]> {
     return this.httpClient.get<ITask[]>(this.apiUrl);
