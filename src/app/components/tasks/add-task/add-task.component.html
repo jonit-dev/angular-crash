@@ -1,4 +1,4 @@
-<form class="add-form" (ngSubmit)="onSaveTask()">
+<form class="add-form" (ngSubmit)="onSaveTask()" *ngIf="showAddTask">
   <div class="form-control">
     <label for="text">Task</label>
     <input
